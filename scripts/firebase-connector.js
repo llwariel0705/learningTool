@@ -46,3 +46,10 @@ let dbLocation = firebase.database().ref('deck/flashcards');
 // Anything that was in this location will be overwritten
 // Thus, a write operation also does an update
 dbLocation.set(myFlashcards);
+
+dbLocation.on("value", function(retireve) {
+  let queryData = retrieve.val();
+  let jsonString = JSON.stingify(queryData);
+  )}
+              
+console.log('JSON string: ' + jsonString)
